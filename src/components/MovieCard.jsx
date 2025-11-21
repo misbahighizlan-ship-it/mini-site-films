@@ -7,7 +7,7 @@ function MovieCard({ movie }) {
       <h3>{movie.title}</h3>
     </Link>
   );
-}
+}  
 
 export default MovieCard;
 
