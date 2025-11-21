@@ -35,24 +35,34 @@
   height: 350px;
   overflow: hidden;
 }
-
 .banner-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   filter: brightness(35%);
 }
-
-.banner-title {
+.banner-subtitle { 
   position: absolute;
-  top: 50%;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family:'Times New Roman', Times, serif;
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+}
+.banner-title {
+ position: absolute;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
   font-size: 48px;
   font-weight: bold;
   text-shadow: 2px 2px 8px black;
-  text-align: center
+  text-align: center;
+  margin: 0;
 }
 
 .home{
@@ -61,22 +71,17 @@
 }
 .home-container {
   background-image: url("./assets/photos/film-background-1334067869u9d.jpg");
-  padding: 30px;
+  padding: 20px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   grid-template-rows: 1fr 1fr;
-  gap: 25px;
+  gap: 20px;
   border-radius: 10px;
   max-width: 1300px;
   height: 730px;
-  margin: 20px auto;
+  margin: 10px auto;
 
 }
-.banner-subtitle {
-  font-size: 14px;   
-  margin-top: 5px;    
-}
-
 .movie-card {
   display: flex;
   width: 210px;
@@ -128,6 +133,7 @@
   padding: 20px;
   border-radius: 15px;
   background-color: #f7e7e7;
+  background-image: url("./assets/photos/film-background-1334067869u9d.jpg");
   font-family: "Inter", sans-serif;
   font-size: 16px;
   color: #242020;
