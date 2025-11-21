@@ -1,32 +1,43 @@
 import { useParams, Link } from "react-router-dom";
 import movies from "../data/movies";
 
-
 function MovieDetails() {
   const { id } = useParams();
   const movie = movies.find((m) => m.id === parseInt(id));
 
-  if (!movie) return <p>Film introuvable.</p>;
-
   return (
-    <div class="details-container">
-      <img src={movie.image} alt={movie.title} />
+     <div class="details-container">
+        <div class="details-img-wrapper">
+          <img class="details-img" src={movie.image} alt={movie.title} />
+     </div>
 
-      <h1>{movie.title}</h1>
-      <p><strong>Année :</strong> {movie.year}</p>
+     <div class="details-info">
+         <h1>{movie.title}</h1>
 
-      <h3>Description</h3>
-      <p>{movie.description}</p>
+          {movie.year && <p><strong>Année :</strong> {movie.year}</p>}
 
-      <h3>Équipe</h3>
-      <ul>
-        {movie.team.map((member, index) => (
-          <li key={index}>{member}</li>
-        ))}
-      </ul>
+          {movie.description && (
+          <>
+          <h3>Description</h3>
+          <p>{movie.description}</p>
+         </>
+         )}
 
-      <Link to="/" class="back-btn">← Retour</Link>
-    </div>
+           {movie.team && movie.team.length > 0 && (
+          <>
+           <h3>Équipe</h3>
+           <ul>
+             {movie.team.map((member, index) => (
+             <li key={index}>{member}</li>
+            ))}
+           </ul>
+         </>
+         )}
+
+    <Link to="/" class="back-btn">Retour</Link>
+       </div>
+     </div>
+
   );
 }
 

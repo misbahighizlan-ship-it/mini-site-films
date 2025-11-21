@@ -1,68 +1,187 @@
-.navbar{
-  background-image: url("./assets/photos/ewss.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 300px;
-  width: 100%; 
-}
-.navbar h2{
-  text-align: center;
-  font-family:'Times New Roman', Times, serif;
-  font-size:50px;
-  color: #ffffff;
-  margin-top: 150px;
-  margin-left: 300px;
-}
-a{
-  color: #ffffff;
-  justify-items: center;
-  text-align: center;
-  list-style: none;
-  display: inline-block;
-  text-decoration: none;
-  gap: 60px;
-  transition: all 0.1s ease 0.2s;
-  font-weight:lighter;
-  text-transform: uppercase;
+.navbar {
+  background-color: #000;
+  height: 60px;
+  width: 95.50%;
+  display: flex;
+  align-items: center;      
+  justify-content: space-between; 
   padding: 0 30px;
-  font-weight:bolder;
-}
+  margin: 0 auto;          
   
-.movie-card {
-  display: inline-block;
-  width: 250px;
+}
+.logo {
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: bold;
+}
+.nav-links {
+  display: flex;          
+  gap: 50px;                  
+}
+
+.nav-links a {
+  color: #ffffff;
   text-decoration: none;
-  color: #000;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: 0.2s;
+}
+.nav-links a:hover {
+  opacity: 0.7;
+}
+.banner {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+}
+
+.banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(35%);
+}
+
+.banner-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 48px;
+  font-weight: bold;
+  text-shadow: 2px 2px 8px black;
+  text-align: center
+}
+
+.home{
+  display: flex;
+  flex-direction: column;
+}
+.home-container {
+  background-image: url("./assets/photos/film-background-1334067869u9d.jpg");
+  padding: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  grid-template-rows: 1fr 1fr;
+  gap: 25px;
+  border-radius: 10px;
+  max-width: 1300px;
+  height: 730px;
+  margin: 20px auto;
+
+}
+.banner-subtitle {
+  font-size: 14px;   
+  margin-top: 5px;    
+}
+
+.movie-card {
+  display: flex;
+  width: 210px;
+  height: 350px;
+  text-decoration: none;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  flex-direction: column;
+  cursor: pointer;
+  color: white;
+  overflow: hidden;
+
 }
 .movie-card img {
   width: 100%;
-  border-radius: 10px;
-  
+  height: 300px;
+  object-fit: cover;
+  border-radius: 15px;
 }
-.movie-card h3 {
-  margin-top: 10px;
+.movie-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px #6e6c6c;
 }
-.home-container {
-  background-image: url();
-  padding: 20px;
+.movie-title {
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  font-weight: bold;
+  font-size: 16px;
+  text-decoration: none;
 }
+.movie-title:hover {
+  color: #6e6c6c; 
+}
+
 .movie-grid {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
 }
+
 .details-container {
+  display: flex;
+  gap: 30px;
+  max-width: 1250px;
+  margin: 40px auto;
   padding: 20px;
-  max-width: 700px;
-  margin: auto;
+  border-radius: 15px;
+  background-color: #f7e7e7;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  color: #242020;
+  align-items: stretch;
+  flex-wrap: wrap; 
 }
-.details-container img {
+
+.details-img-wrapper,
+.details-info {
+  flex: 1;              
+  min-width: 300px;     
+}
+
+.details-img {
   width: 100%;
-  border-radius: 8px;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(139, 136, 136, 0.45);
 }
+.details-info ul {
+  list-style: none; 
+  padding: 0;
+  margin-top: 10px;
+}
+
+.details-info li {
+  background: #f0f0f0; 
+  padding: 10px 12px;
+  margin-bottom: 8px;
+  border-radius: 10px;
+  color: #242020;
+  border: none; 
+  box-shadow: none; 
+}
+
 .back-btn {
   display: inline-block;
+  width: 100px;
+  height: 35px;
+  line-height: 35px;    
+  text-align: center;
+  background-color: #310a0a; 
+  color: white;
+  text-decoration: none; 
+  font-weight: 600;
+  border-radius: 10px;           
+  cursor: pointer;
   margin-top: 20px;
-  text-decoration: none;
-  color: #007bff;
+  border: none;       
+  box-shadow: none;   
+  transition: 0.3s;
+}
+
+.back-btn:hover {
+  background-color: #570206; 
 }
