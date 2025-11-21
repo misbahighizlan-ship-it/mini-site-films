@@ -4,7 +4,7 @@ function MovieCard({ movie }) {
   return (
     <Link to={`/movie/${movie.id}`} class="movie-card">
       <img src={movie.image} alt={movie.title} />
-      <h3>{movie.title}</h3>
+      <h3>{movie.title}</h3> 
     </Link>
   );
 }  
