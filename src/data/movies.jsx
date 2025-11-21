@@ -8,8 +8,8 @@ import movie7 from "../assets/photos/weapons-2025.jpeg";
 import movie8 from "../assets/photos/1308274-the-stranger-2025-1-0-230-0-345-crop.jpg";
 import movie9 from "../assets/photos/affiche_hd-13-768x1024.jpg";
 import movie10 from "../assets/photos/856696d9b1a53921272ea1b42c4d649f.jpg";
-import movie11 from "../assets/photos/MV5BOWY4NDRlMzAtMjcwYy00OTYxLWEwY2QtMmRjODhiNDJiMDg1XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg";
-import movie12 from "../assets/photos/ascq-44-les-martyrs-du-nord.jpg"; 
+import movie11 from "../assets/photos/photo.jpg" ;
+import movie12 from "../assets/photos/ascq-44-les-martyrs-du-nord.jpg";
 const movies = [
   {
     id: 1,
